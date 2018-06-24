@@ -24,6 +24,17 @@ class BlogService extends Service {
     );
     return { blog }
   }
+  async releaseBlog(query) {
+    const result = await this.app.mysql.query(
+      'INSERT INTO blogs (author, title, summary, content, release_time) VALUES (1, ?, ?, ?, now())',
+      [query.title, query.summary, query.content]
+    );
+    if(result.affectedRows == 1) {
+      return { message: '发布成功' }
+    } else {
+      return { message: '发布失败' }
+    }
+  }
 }
 
 module.exports = BlogService;

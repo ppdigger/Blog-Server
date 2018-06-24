@@ -9,3 +9,6 @@ exports.mysql = {
 exports.validate = {
   package: 'egg-validate',
 };
+exports.qiniu = {
+  package: 'qiniu',
+};

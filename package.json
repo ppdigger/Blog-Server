@@ -5,9 +5,11 @@
   "private": true,
   "dependencies": {
     "egg": "^2.9.0",
+    "egg-jwt": "^3.0.0",
     "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.5.0",
     "egg-validate": "^1.0.0",
+    "moment": "^2.22.2",
     "qiniu": "^7.1.7"
   },
   "devDependencies": {

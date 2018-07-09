@@ -25,6 +25,9 @@ module.exports = appInfo => {
       csrf: {
         enable: false,
       },
+    },
+    jwt: {
+      secret: "shao"
     }
   };
 

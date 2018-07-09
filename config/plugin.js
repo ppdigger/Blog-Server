@@ -12,3 +12,7 @@ exports.validate = {
 exports.qiniu = {
   package: 'qiniu',
 };
+exports.jwt = {
+  enable: true,
+  package: 'egg-jwt'
+};

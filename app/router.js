@@ -10,4 +10,6 @@ module.exports = app => {
   router.get('/search', controller.blog.search);
   router.get('/qiniuToken', controller.blog.qiniuToken);
   router.post('/releaseBlog', controller.blog.releaseBlog);
+  router.post('/login', controller.login.login);
+  router.post('/register', controller.login.register);
 };

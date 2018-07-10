@@ -24,7 +24,7 @@ class LoginService extends Service {
           token: this.app.jwt.sign({
             iss: result[0].id,
             name: result[0].name,
-            exp: Number(expires) + 7*24*60*60*1000,
+            exp: Math.floor(Date.now() / 1000) + (7* 24* 60* 60),
           }, this.app.config.jwt.secret),
           id: result[0].id,
           name: result[0].name,

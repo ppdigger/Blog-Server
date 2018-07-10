@@ -46,7 +46,8 @@ class BlogController extends Controller {
   }
   async releaseBlog() {
     this.ctx.validate(ValidatorRule.releaseBlog, this.ctx.request.body)
-    this.ctx.body = await this.service.blog.releaseBlog(this.ctx.request.body)
+    let id = this.ctx.state.user.iss;
+    this.ctx.body = await this.service.blog.releaseBlog(this.ctx.request.body, id)
     this.ctx.status = 201;
   }
 }
